@@ -20,7 +20,7 @@ const countriesData = {
         content:
           "The earliest known inhabitants of Palestine were the Canaanites, who established cities and developed trade networks throughout the region.",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QW5jaWVudCBDYW5hYW5pdGVzPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+",
+          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QW5jaWVudCBDYW5hYW5pdGVzPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+",
       },
       {
         year: 1000,
@@ -28,7 +28,7 @@ const countriesData = {
         content:
           "The ancient Kingdom of Israel was established, with Jerusalem as its capital. This period saw the construction of the First Temple.",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+S2luZ2RvbSBvZiBJc3JhZWw8L3RleHQ+Cjwvc3ZnPgo8L3N2Zz4=",
+          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+S2luZ2RvbSBvZiBJc3JhZWw8L3RleHQ+Cjwvc3ZnPgo8L3N2Zz4=",
       },
       {
         year: 638,
@@ -44,7 +44,7 @@ const countriesData = {
         content:
           "The British government issued the Balfour Declaration, expressing support for a Jewish homeland in Palestine.",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QmFsZm91ciBEZWNsYXJhdGlvbjwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QmFsZm91ciBEZWNsYXJhdGlvbjwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
       },
       {
         year: 1948,
@@ -102,6 +102,16 @@ const countriesData = {
       { name: "Nablus", lat: 32.2211, lng: 35.2544, population: "156,000" },
     ],
     userPins: [],
+    photoGalleries: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
   },
   jordan: {
     name: "Jordan",
@@ -163,6 +173,16 @@ const countriesData = {
       { name: "Salt", lat: 32.0389, lng: 35.7272, population: "99,000" },
     ],
     userPins: [],
+    photoGalleries: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
   },
   egypt: {
     name: "Egypt",
@@ -225,6 +245,16 @@ const countriesData = {
       { name: "Aswan", lat: 24.0889, lng: 32.8998, population: "375,000" },
     ],
     userPins: [],
+    photoGalleries: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
   },
 }
 
@@ -300,6 +330,19 @@ function initializeEventListeners() {
       closeModals()
     }
   })
+
+  // Admin password form
+  document.getElementById("adminPasswordForm").addEventListener("submit", handleAdminPasswordSubmit)
+  document.querySelector(".admin-password-close").addEventListener("click", closeModals)
+  document.querySelector(".admin-password-cancel").addEventListener("click", closeModals)
+
+  // Photo gallery buttons
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("add-photo-btn")) {
+      const section = e.target.dataset.section
+      openPhotoContributionModal(section)
+    }
+  })
 }
 
 // Routing
@@ -312,6 +355,48 @@ function loadRoute() {
   } else {
     navigateTo("home")
   }
+}
+
+// Admin password
+const ADMIN_PASSWORD = "admin123"
+
+// Update the handleAdminKeypress function:
+function handleAdminKeypress(e) {
+  if (e.ctrlKey && e.shiftKey && e.key === "A") {
+    e.preventDefault()
+    showAdminPasswordPrompt()
+  }
+}
+
+function showAdminPasswordPrompt() {
+  document.getElementById("adminPasswordModal").classList.add("active")
+  document.getElementById("adminPassword").focus()
+}
+
+function handleAdminPasswordSubmit(e) {
+  e.preventDefault()
+  const password = document.getElementById("adminPassword").value
+
+  if (password === ADMIN_PASSWORD) {
+    closeModals()
+    openAdminDashboard()
+    document.getElementById("adminPassword").value = ""
+  } else {
+    showNotification("Incorrect password!")
+    document.getElementById("adminPassword").value = ""
+    document.getElementById("adminPassword").focus()
+  }
+}
+
+function openPhotoContributionModal(section) {
+  document.getElementById("contributionModal").classList.add("active")
+  document.getElementById("contributionForm").reset()
+
+  // Set the contribution type to photo-gallery
+  document.getElementById("contributionType").value = "photo-gallery"
+  document.getElementById("contributionType").dataset.section = section
+
+  handleContributionTypeChange()
 }
 
 function navigateTo(page, country = null) {
@@ -338,8 +423,10 @@ function showPage(pageId) {
 function initializeWorldMap() {
   worldMap = L.map("worldMap").setView([20, 0], 2)
 
+  // Use English-only tile layer
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
+    language: "en",
   }).addTo(worldMap)
 
   // Add country markers
@@ -370,6 +457,9 @@ function loadCountryData(countryKey) {
   loadSectionContent("politics", country.politics)
   loadSectionContent("tourism", country.tourism)
   loadSectionContent("extras", country.extras)
+
+  // Load photo galleries
+  loadPhotoGalleries(country)
 
   // Initialize country map
   setTimeout(() => initializeCountryMap(country), 100)
@@ -422,6 +512,7 @@ function initializeCountryMap(country) {
 
   countryMap = L.map("countryMap").setView(country.coordinates, 8)
 
+  // Use English-only tile layer
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
   }).addTo(countryMap)
@@ -486,6 +577,7 @@ function handleContributionTypeChange() {
   const type = document.getElementById("contributionType").value
   const mapPinGroup = document.getElementById("mapPinGroup")
   const yearGroup = document.getElementById("yearGroup")
+  const photoCaptionGroup = document.getElementById("photoCaptionGroup")
 
   if (type === "map-pin") {
     mapPinGroup.style.display = "block"
@@ -498,6 +590,16 @@ function handleContributionTypeChange() {
     yearGroup.style.display = "block"
   } else {
     yearGroup.style.display = "none"
+  }
+
+  if (type === "photo-gallery") {
+    photoCaptionGroup.style.display = "block"
+    document.getElementById("contributionImage").required = true
+    document.getElementById("photoCaption").required = true
+  } else {
+    photoCaptionGroup.style.display = "none"
+    document.getElementById("contributionImage").required = false
+    document.getElementById("photoCaption").required = false
   }
 }
 
@@ -533,6 +635,7 @@ function handleContributionSubmit(e) {
   const content = formData.get("contributionText")
   const year = formData.get("contributionYear")
   const imageFile = formData.get("contributionImage")
+  const photoCaption = formData.get("photoCaption")
 
   const contribution = {
     id: Date.now(),
@@ -541,8 +644,14 @@ function handleContributionSubmit(e) {
     title: title,
     content: content,
     year: year || null,
+    photoCaption: photoCaption || null,
     timestamp: new Date().toISOString(),
     status: "pending",
+  }
+
+  // For photo gallery contributions, get the section
+  if (type === "photo-gallery") {
+    contribution.section = document.getElementById("contributionType").dataset.section
   }
 
   // Handle image if provided
@@ -583,13 +692,6 @@ function submitContribution(contribution) {
 }
 
 // Admin System
-function handleAdminKeypress(e) {
-  if (e.ctrlKey && e.shiftKey && e.key === "A") {
-    e.preventDefault()
-    openAdminDashboard()
-  }
-}
-
 function openAdminDashboard() {
   isAdmin = true
   document.getElementById("adminDashboard").classList.add("active")
@@ -712,6 +814,15 @@ function applyContribution(contribution) {
     })
     // Sort history by year
     country.history.sort((a, b) => a.year - b.year)
+  } else if (contribution.type === "photo-gallery") {
+    if (!country.photoGalleries[contribution.section]) {
+      country.photoGalleries[contribution.section] = []
+    }
+    country.photoGalleries[contribution.section].push({
+      image: contribution.image,
+      caption: contribution.photoCaption,
+      status: "approved",
+    })
   } else {
     // Add to other sections
     if (country[contribution.type]) {
@@ -735,6 +846,27 @@ function switchAdminTab(tabName) {
     content.classList.remove("active")
   })
   document.getElementById(`${tabName}Tab`).classList.add("active")
+}
+
+function loadPhotoGalleries(country) {
+  Object.keys(country.photoGalleries).forEach((section) => {
+    const gallery = document.getElementById(`${section}Gallery`)
+    if (gallery) {
+      gallery.innerHTML = ""
+
+      country.photoGalleries[section].forEach((photo) => {
+        if (photo.status === "approved") {
+          const photoItem = document.createElement("div")
+          photoItem.className = "photo-item"
+          photoItem.innerHTML = `
+                        <img src="${photo.image}" alt="${photo.caption}">
+                        <div class="photo-caption">${photo.caption}</div>
+                    `
+          gallery.appendChild(photoItem)
+        }
+      })
+    }
+  })
 }
 
 // Utility Functions
