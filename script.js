@@ -9,7 +9,7 @@ const L = window.L // Declare the L variable
 const countriesData = {
   palestine: {
     name: "Palestine",
-    flag: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwMDAiLz4KPHJlY3QgeT0iMjAwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB5PSI0MDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDA3YTNkIi8+Cjxwb2x5Z29uIHBvaW50cz0iMCwwIDMwMCwzMDAgMCw2MDAiIGZpbGw9IiNjZTExMjYiLz4KPHN0YXIgY3g9IjE1MCIgY3k9IjMwMCIgcj0iNDAiIGZpbGw9IiNmZmYiLz4KPC9zdmc+",
+    flag: "https://flagcdn.com/w320/ps.png",
     coordinates: [31.9522, 35.2332],
     overview:
       "Palestine is a region in Western Asia, historically significant as the birthplace of Judaism and Christianity. The area has been inhabited for thousands of years and holds deep cultural and religious importance for multiple peoples.",
@@ -19,48 +19,42 @@ const countriesData = {
         title: "Ancient Canaanites",
         content:
           "The earliest known inhabitants of Palestine were the Canaanites, who established cities and developed trade networks throughout the region.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QW5jaWVudCBDYW5hYW5pdGVzPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1000,
         title: "Kingdom of Israel",
         content:
           "The ancient Kingdom of Israel was established, with Jerusalem as its capital. This period saw the construction of the First Temple.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+S2luZ2RvbSBvZiBJc3JhZWw8L3RleHQ+Cjwvc3ZnPgo8L3N2Zz4=",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 638,
         title: "Islamic Conquest",
         content:
           "The region came under Islamic rule following the conquest by the Rashidun Caliphate, beginning centuries of Islamic governance.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+SXNsYW1pYyBDb25xdWVzdDwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1917,
         title: "Balfour Declaration",
         content:
           "The British government issued the Balfour Declaration, expressing support for a Jewish homeland in Palestine.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QmFsZm91ciBEZWNsYXJhdGlvbjwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1948,
         title: "Nakba and Israeli Independence",
         content:
           "The establishment of Israel led to the displacement of hundreds of thousands of Palestinians in what is known as the Nakba (catastrophe).",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+TmFrYmEgMTk0ODwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1993,
         title: "Oslo Accords",
         content:
           "The Oslo Accords were signed between Israel and the Palestine Liberation Organization, establishing the Palestinian Authority.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+T3NsbyBBY2NvcmRzPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+",
+        image: "/placeholder.svg?height=200&width=300",
       },
     ],
     culture: {
@@ -102,7 +96,7 @@ const countriesData = {
       { name: "Nablus", lat: 32.2211, lng: 35.2544, population: "156,000" },
     ],
     userPins: [],
-    photoGalleries: {
+    userContributions: {
       overview: [],
       history: [],
       culture: [],
@@ -115,7 +109,7 @@ const countriesData = {
   },
   jordan: {
     name: "Jordan",
-    flag: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMwMDAiLz4KPHJlY3QgeT0iMjAwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB5PSI0MDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDA3YTNkIi8+Cjx0cmlhbmdsZSBwb2ludHM9IjAsMCAzMDAsMzAwIDAsMzAwIiBmaWxsPSIjY2UxMTI2Ii8+CjxzdGFyIGN4PSIxMDAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==",
+    flag: "https://flagcdn.com/w320/jo.png",
     coordinates: [31.2397, 36.5681],
     overview:
       "Jordan is a Middle Eastern country known for its ancient monuments, nature reserves, and seaside resorts. It's home to the famed archaeological site of Petra and the Dead Sea.",
@@ -124,56 +118,52 @@ const countriesData = {
         year: 1921,
         title: "Emirate of Transjordan",
         content: "The Emirate of Transjordan was established under British mandate, with Abdullah I as its ruler.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+RW1pcmF0ZSBvZiBUcmFuc2pvcmRhbjwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1946,
         title: "Independence",
         content: "Jordan gained independence from Britain and became the Hashemite Kingdom of Jordan.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+SW5kZXBlbmRlbmNlPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+",
+        image: "/placeholder.svg?height=200&width=300",
       },
     ],
     culture: {
       title: "Jordanian Culture",
       content:
-        "Jordanian culture blends Bedouin traditions with modern Arab culture. Hospitality is a cornerstone of Jordanian society, with guests treated with utmost respect and generosity. Traditional music includes the oud and tabla, while folk dances like the Dabke are performed at celebrations. The culture values family ties, respect for elders, and community solidarity. Jordanian handicrafts include beautiful carpets, pottery, and silver jewelry.",
+        "Jordanian culture blends Bedouin traditions with modern Arab culture. Hospitality is a cornerstone of Jordanian society.",
     },
     food: {
       title: "Jordanian Cuisine",
       content:
-        "Mansaf is the national dish of Jordan, consisting of lamb cooked in jameed (dried yogurt) sauce and served with rice. Other popular dishes include Maqluba, Zarb (Bedouin barbecue), and various mezze dishes. Jordanian cuisine features fresh herbs, olive oil, and spices like sumac and za'atar. Traditional sweets include Knafeh and Baklava. Tea and Arabic coffee are central to Jordanian hospitality.",
+        "Mansaf is the national dish of Jordan, consisting of lamb cooked in jameed (dried yogurt) sauce and served with rice.",
     },
     books: {
       title: "Jordanian Literature",
       content:
-        "Jordan has produced notable authors like Fadia Faqir ('Pillars of Salt'), Elias Khoury, and Nawal El Saadawi. Contemporary writers continue to explore themes of identity, tradition, and modernity. Jordanian poetry has deep roots in Bedouin oral traditions, with modern poets like Mustafa Wahbi Al-Tal contributing to Arabic literature. The country's literary scene reflects its position as a crossroads of cultures.",
+        "Jordan has produced notable authors like Fadia Faqir and Elias Khoury, contributing to contemporary Arabic literature.",
     },
     politics: {
       title: "Political System",
       content:
-        "Jordan is a constitutional monarchy ruled by the Hashemite dynasty, with King Abdullah II as the current monarch since 1999. The country has a bicameral parliament and has undergone various political reforms. Jordan plays a significant role in Middle Eastern politics and has been a key ally in regional stability efforts. The kingdom faces challenges including economic development, refugee populations, and regional security concerns.",
+        "Jordan is a constitutional monarchy ruled by the Hashemite dynasty, with King Abdullah II as the current monarch.",
     },
     tourism: {
       title: "Tourist Attractions",
       content:
-        "Petra, the ancient Nabataean city carved into rose-red cliffs, is Jordan's most famous attraction and a UNESCO World Heritage Site. The Dead Sea offers unique floating experiences and therapeutic mud treatments. Wadi Rum desert provides stunning landscapes and Bedouin cultural experiences. The ancient Roman city of Jerash features well-preserved ruins. Aqaba offers Red Sea diving and beach resorts.",
+        "Petra, the Dead Sea, Wadi Rum desert, and the ancient city of Jerash are among Jordan's top attractions.",
     },
     extras: {
       title: "Additional Facts",
       content:
-        "Jordan is one of the most water-scarce countries in the world and has been a refuge for many displaced populations throughout its history. The country is known for its stability in a turbulent region. Jordan has significant phosphate and potash reserves. The kingdom is also developing renewable energy projects, particularly solar power, to address energy needs and environmental concerns.",
+        "Jordan is one of the most water-scarce countries in the world and has been a refuge for many displaced populations.",
     },
     cities: [
       { name: "Amman", lat: 31.9454, lng: 35.9284, population: "4,007,000" },
       { name: "Zarqa", lat: 32.0728, lng: 36.0876, population: "635,000" },
       { name: "Irbid", lat: 32.5556, lng: 35.85, population: "307,000" },
-      { name: "Aqaba", lat: 29.532, lng: 35.0063, population: "188,000" },
-      { name: "Salt", lat: 32.0389, lng: 35.7272, population: "99,000" },
     ],
     userPins: [],
-    photoGalleries: {
+    userContributions: {
       overview: [],
       history: [],
       culture: [],
@@ -186,7 +176,7 @@ const countriesData = {
   },
   egypt: {
     name: "Egypt",
-    flag: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNjZTExMjYiLz4KPHJlY3QgeT0iMjAwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB5PSI0MDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDAwIi8+CjxjaXJjbGUgY3g9IjQ1MCIgY3k9IjMwMCIgcj0iNjAiIGZpbGw9IiNmZmQzMDAiLz4KPC9zdmc+",
+    flag: "https://flagcdn.com/w320/eg.png",
     coordinates: [26.8206, 30.8025],
     overview:
       "Egypt, officially the Arab Republic of Egypt, is a transcontinental country spanning the northeast corner of Africa and southwest corner of Asia. It is famous for its ancient civilization and some of the world's most famous monuments, including the Giza pyramid complex and its Great Sphinx.",
@@ -196,56 +186,231 @@ const countriesData = {
         title: "Ancient Egypt Unification",
         content:
           "The unification of Upper and Lower Egypt under the first pharaoh, marking the beginning of ancient Egyptian civilization.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+QW5jaWVudCBFZ3lwdDwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
         year: 1952,
         title: "Egyptian Revolution",
         content:
           "The Free Officers Revolution led by Gamal Abdel Nasser overthrew the monarchy and established the Republic of Egypt.",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNGYxZWIiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIj4KPHRleHQgeD0iMTAwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZiOGUyMyIgZm9udC1zaXplPSIxNiI+RWd5cHRpYW4gUmV2b2x1dGlvbjwvdGV4dD4KPC9zdmc+Cjwvc3ZnPg==",
+        image: "/placeholder.svg?height=200&width=300",
       },
     ],
     culture: {
       title: "Egyptian Culture",
       content:
-        "Egyptian culture has a rich history spanning over 5,000 years. Modern Egyptian culture is a blend of ancient traditions, Islamic influences, and contemporary elements. Music, cinema, and literature play important roles, with Egypt being considered the Hollywood of the Arab world. Traditional crafts include pottery, textiles, and metalwork.",
+        "Egyptian culture has a rich history spanning over 5,000 years. Modern Egyptian culture is a blend of ancient traditions, Islamic influences, and contemporary elements.",
     },
     food: {
       title: "Egyptian Cuisine",
       content:
-        "Egyptian cuisine features dishes like Koshari (mixed rice, lentils, and pasta), Ful medames (fava beans), Molokhia (jute leaf soup), and various grilled meats. Bread is a staple, and traditional sweets include Basbousa and Umm Ali. Tea and coffee are important parts of Egyptian hospitality.",
+        "Egyptian cuisine features dishes like Koshari, Ful medames, Molokhia, and various grilled meats. Bread is a staple.",
     },
     books: {
       title: "Egyptian Literature",
       content:
-        "Egypt has produced Nobel Prize winner Naguib Mahfouz, author of the Cairo Trilogy. Other notable writers include Taha Hussein, Yusuf Idris, and contemporary authors like Alaa Al Aswany. Egyptian literature often explores themes of social change, tradition, and modernity.",
+        "Egypt has produced Nobel Prize winner Naguib Mahfouz, author of the Cairo Trilogy. Other notable writers include Taha Hussein and Yusuf Idris.",
     },
     politics: {
       title: "Political System",
       content:
-        "Egypt is a republic with a strong presidential system. The country has experienced significant political changes, including the 2011 revolution and subsequent transitions. Egypt plays a crucial role in Middle Eastern and African politics.",
+        "Egypt is a republic with a strong presidential system. The country has experienced significant political changes, including the 2011 revolution.",
     },
     tourism: {
       title: "Tourist Attractions",
       content:
-        "The Pyramids of Giza, the Sphinx, Luxor's ancient temples, the Valley of the Kings, and Abu Simbel are among Egypt's most famous attractions. The Red Sea coast offers world-class diving, while the Nile River provides scenic cruises through ancient landscapes.",
+        "The Pyramids of Giza, the Sphinx, Luxor's ancient temples, the Valley of the Kings, and Abu Simbel are among Egypt's most famous attractions.",
     },
     extras: {
       title: "Additional Information",
       content:
-        "The Nile River is central to Egyptian life and agriculture. Egypt is home to one of the world's oldest civilizations and has made significant contributions to mathematics, medicine, and architecture. The Suez Canal is a crucial global shipping route.",
+        "The Nile River is central to Egyptian life and agriculture. Egypt is home to one of the world's oldest civilizations.",
     },
     cities: [
       { name: "Cairo", lat: 30.0444, lng: 31.2357, population: "20,900,000" },
       { name: "Alexandria", lat: 31.2001, lng: 29.9187, population: "5,200,000" },
       { name: "Luxor", lat: 25.6872, lng: 32.6396, population: "506,000" },
-      { name: "Aswan", lat: 24.0889, lng: 32.8998, population: "375,000" },
     ],
     userPins: [],
-    photoGalleries: {
+    userContributions: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
+  },
+  lebanon: {
+    name: "Lebanon",
+    flag: "https://flagcdn.com/w320/lb.png",
+    coordinates: [33.8547, 35.8623],
+    overview:
+      "Lebanon is a country in Western Asia. It is located between Syria to the north and east and Israel to the south, while Cyprus lies to its west across the Mediterranean Sea.",
+    history: [
+      {
+        year: 1943,
+        title: "Independence",
+        content: "Lebanon gained independence from France, establishing the modern Lebanese state.",
+        image: "/placeholder.svg?height=200&width=300",
+      },
+    ],
+    culture: {
+      title: "Lebanese Culture",
+      content:
+        "Lebanese culture is known for its diversity, hospitality, and rich traditions in music, dance, and arts.",
+    },
+    food: {
+      title: "Lebanese Cuisine",
+      content: "Lebanese cuisine is famous for mezze, hummus, tabbouleh, and various grilled meats and seafood.",
+    },
+    books: {
+      title: "Lebanese Literature",
+      content:
+        "Lebanon has produced renowned authors like Khalil Gibran, author of 'The Prophet', and many contemporary writers.",
+    },
+    politics: {
+      title: "Political System",
+      content:
+        "Lebanon is a parliamentary republic with a unique confessional system that distributes power among religious communities.",
+    },
+    tourism: {
+      title: "Tourist Attractions",
+      content: "Beirut, Baalbek, Byblos, and the Cedars of God are among Lebanon's most famous attractions.",
+    },
+    extras: {
+      title: "Additional Information",
+      content: "Lebanon is known as the 'Switzerland of the Middle East' and has a large diaspora worldwide.",
+    },
+    cities: [
+      { name: "Beirut", lat: 33.8938, lng: 35.5018, population: "2,200,000" },
+      { name: "Tripoli", lat: 34.4332, lng: 35.8497, population: "500,000" },
+    ],
+    userPins: [],
+    userContributions: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
+  },
+  syria: {
+    name: "Syria",
+    flag: "https://flagcdn.com/w320/sy.png",
+    coordinates: [34.8021, 38.9968],
+    overview:
+      "Syria is a country in Western Asia, bordering Lebanon to the southwest, the Mediterranean Sea to the west, Turkey to the north, Iraq to the east, Jordan to the south, and Israel to the southwest.",
+    history: [
+      {
+        year: 1946,
+        title: "Independence",
+        content: "Syria gained independence from France, establishing the modern Syrian state.",
+        image: "/placeholder.svg?height=200&width=300",
+      },
+    ],
+    culture: {
+      title: "Syrian Culture",
+      content:
+        "Syrian culture is one of the oldest in the world, with influences from various civilizations throughout history.",
+    },
+    food: {
+      title: "Syrian Cuisine",
+      content:
+        "Syrian cuisine features dishes like kibbeh, fattoush, and various kebabs, known for rich flavors and spices.",
+    },
+    books: {
+      title: "Syrian Literature",
+      content:
+        "Syria has a rich literary tradition with authors like Adonis and Zakaria Tamer contributing to Arabic literature.",
+    },
+    politics: {
+      title: "Political System",
+      content: "Syria is a republic that has faced significant challenges and conflicts in recent years.",
+    },
+    tourism: {
+      title: "Tourist Attractions",
+      content: "Damascus, Aleppo, Palmyra, and the Krak des Chevaliers are among Syria's historic attractions.",
+    },
+    extras: {
+      title: "Additional Information",
+      content: "Syria is considered the cradle of civilization and has numerous UNESCO World Heritage Sites.",
+    },
+    cities: [
+      { name: "Damascus", lat: 33.5138, lng: 36.2765, population: "2,500,000" },
+      { name: "Aleppo", lat: 36.2021, lng: 37.1343, population: "2,100,000" },
+    ],
+    userPins: [],
+    userContributions: {
+      overview: [],
+      history: [],
+      culture: [],
+      food: [],
+      books: [],
+      politics: [],
+      tourism: [],
+      extras: [],
+    },
+  },
+  iraq: {
+    name: "Iraq",
+    flag: "https://flagcdn.com/w320/iq.png",
+    coordinates: [33.2232, 43.6793],
+    overview:
+      "Iraq is a country in Western Asia, bordered by Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to the southwest and Syria to the west.",
+    history: [
+      {
+        year: -3500,
+        title: "Mesopotamian Civilization",
+        content: "Ancient Mesopotamia, often called the cradle of civilization, flourished in what is now Iraq.",
+        image: "/placeholder.svg?height=200&width=300",
+      },
+      {
+        year: 1921,
+        title: "Kingdom of Iraq",
+        content: "The Kingdom of Iraq was established under British mandate after World War I.",
+        image: "/placeholder.svg?height=200&width=300",
+      },
+    ],
+    culture: {
+      title: "Iraqi Culture",
+      content:
+        "Iraqi culture is one of the world's oldest, with contributions to literature, science, and arts spanning millennia.",
+    },
+    food: {
+      title: "Iraqi Cuisine",
+      content:
+        "Iraqi cuisine features dishes like masgouf, dolma, and various rice dishes, influenced by Persian and Arab traditions.",
+    },
+    books: {
+      title: "Iraqi Literature",
+      content:
+        "Iraq has produced notable poets and writers, contributing significantly to Arabic literature and poetry.",
+    },
+    politics: {
+      title: "Political System",
+      content:
+        "Iraq is a federal parliamentary republic that has undergone significant political changes in recent decades.",
+    },
+    tourism: {
+      title: "Tourist Attractions",
+      content: "Baghdad, Babylon, Ur, and various ancient Mesopotamian sites showcase Iraq's rich historical heritage.",
+    },
+    extras: {
+      title: "Additional Information",
+      content: "Iraq is home to the ancient cities of Babylon and Ur, and the Tigris and Euphrates rivers.",
+    },
+    cities: [
+      { name: "Baghdad", lat: 33.3152, lng: 44.3661, population: "7,000,000" },
+      { name: "Basra", lat: 30.5085, lng: 47.7804, population: "2,500,000" },
+    ],
+    userPins: [],
+    userContributions: {
       overview: [],
       history: [],
       culture: [],
@@ -262,6 +427,9 @@ const countriesData = {
 const pendingContributions = JSON.parse(localStorage.getItem("pendingContributions")) || []
 const approvedContributions = JSON.parse(localStorage.getItem("approvedContributions")) || []
 const rejectedContributions = JSON.parse(localStorage.getItem("rejectedContributions")) || []
+
+// Admin password
+const ADMIN_PASSWORD = "admin123"
 
 // Initialize the application
 document.addEventListener("DOMContentLoaded", () => {
@@ -324,23 +492,15 @@ function initializeEventListeners() {
     tab.addEventListener("click", (e) => switchAdminTab(e.target.dataset.adminTab))
   })
 
-  // Close modals when clicking outside
-  document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("modal")) {
-      closeModals()
-    }
-  })
-
   // Admin password form
   document.getElementById("adminPasswordForm").addEventListener("submit", handleAdminPasswordSubmit)
   document.querySelector(".admin-password-close").addEventListener("click", closeModals)
   document.querySelector(".admin-password-cancel").addEventListener("click", closeModals)
 
-  // Photo gallery buttons
+  // Close modals when clicking outside
   document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("add-photo-btn")) {
-      const section = e.target.dataset.section
-      openPhotoContributionModal(section)
+    if (e.target.classList.contains("modal")) {
+      closeModals()
     }
   })
 }
@@ -355,48 +515,6 @@ function loadRoute() {
   } else {
     navigateTo("home")
   }
-}
-
-// Admin password
-const ADMIN_PASSWORD = "admin123"
-
-// Update the handleAdminKeypress function:
-function handleAdminKeypress(e) {
-  if (e.ctrlKey && e.shiftKey && e.key === "A") {
-    e.preventDefault()
-    showAdminPasswordPrompt()
-  }
-}
-
-function showAdminPasswordPrompt() {
-  document.getElementById("adminPasswordModal").classList.add("active")
-  document.getElementById("adminPassword").focus()
-}
-
-function handleAdminPasswordSubmit(e) {
-  e.preventDefault()
-  const password = document.getElementById("adminPassword").value
-
-  if (password === ADMIN_PASSWORD) {
-    closeModals()
-    openAdminDashboard()
-    document.getElementById("adminPassword").value = ""
-  } else {
-    showNotification("Incorrect password!")
-    document.getElementById("adminPassword").value = ""
-    document.getElementById("adminPassword").focus()
-  }
-}
-
-function openPhotoContributionModal(section) {
-  document.getElementById("contributionModal").classList.add("active")
-  document.getElementById("contributionForm").reset()
-
-  // Set the contribution type to photo-gallery
-  document.getElementById("contributionType").value = "photo-gallery"
-  document.getElementById("contributionType").dataset.section = section
-
-  handleContributionTypeChange()
 }
 
 function navigateTo(page, country = null) {
@@ -423,11 +541,25 @@ function showPage(pageId) {
 function initializeWorldMap() {
   worldMap = L.map("worldMap").setView([20, 0], 2)
 
-  // Use English-only tile layer
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
     language: "en",
   }).addTo(worldMap)
+
+  // Add custom style for thicker borders
+  const style = document.createElement("style")
+  style.textContent = `
+  .leaflet-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .leaflet-control-attribution {
+    font-size: 10px;
+  }
+  .leaflet-popup-content {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+`
+  document.head.appendChild(style)
 
   // Add country markers
   Object.keys(countriesData).forEach((countryKey) => {
@@ -458,9 +590,6 @@ function loadCountryData(countryKey) {
   loadSectionContent("tourism", country.tourism)
   loadSectionContent("extras", country.extras)
 
-  // Load photo galleries
-  loadPhotoGalleries(country)
-
   // Initialize country map
   setTimeout(() => initializeCountryMap(country), 100)
 
@@ -470,39 +599,269 @@ function loadCountryData(countryKey) {
 
 function loadOverviewContent(country) {
   document.getElementById("countryOverview").innerHTML = `
-        <h3>About ${country.name}</h3>
-        <p>${country.overview}</p>
-    `
+    <h3>About ${country.name}</h3>
+    <p>${country.overview}</p>
+    <div class="user-contributions-section">
+        <h4>Community Contributions</h4>
+        <div id="overviewUserContributions" class="user-contributions-container"></div>
+    </div>
+`
+
+  // Load user contributions for overview
+  loadUserContributions("overview", country.userContributions.overview)
 }
 
 function loadHistoryContent(country) {
   const timeline = document.getElementById("timeline")
   timeline.innerHTML = ""
 
-  country.history.forEach((event) => {
-    const timelineItem = document.createElement("div")
-    timelineItem.className = "timeline-item"
-    timelineItem.innerHTML = `
-            <div class="timeline-year">${event.year}</div>
-            <div class="timeline-content">
-                <h4>${event.title}</h4>
-                <p>${event.content}</p>
-                ${event.image ? `<img src="${event.image}" alt="${event.title}" class="timeline-image">` : ""}
-            </div>
-        `
-    timeline.appendChild(timelineItem)
+  // Create the path SVG
+  const pathContainer = document.createElement("div")
+  pathContainer.className = "timeline-path-container"
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
+  svg.setAttribute("class", "timeline-path-svg")
+  svg.setAttribute("viewBox", "0 0 100 " + country.history.length * 200)
+  svg.setAttribute("preserveAspectRatio", "none")
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path")
+
+  // Create curved zigzag path
+  let pathData = "M50,0 "
+  for (let i = 0; i < country.history.length; i++) {
+    const y = (i + 1) * 200
+    const x = i % 2 === 0 ? 30 : 70
+    const prevX = i === 0 ? 50 : (i - 1) % 2 === 0 ? 30 : 70
+    const controlY = y - 100
+
+    pathData += `Q${prevX},${controlY} ${x},${y} `
+  }
+
+  path.setAttribute("d", pathData)
+  path.setAttribute("class", "timeline-path")
+  svg.appendChild(path)
+  pathContainer.appendChild(svg)
+  timeline.appendChild(pathContainer)
+
+  // Create timeline nodes
+  country.history.forEach((event, index) => {
+    const timelineNode = document.createElement("div")
+    timelineNode.className = `timeline-node ${index % 2 === 0 ? "left" : "right"}`
+    timelineNode.style.top = `${(index + 1) * 200 - 60}px`
+
+    timelineNode.innerHTML = `
+      <div class="timeline-bubble" data-event-index="${index}">
+        <div class="timeline-year">${event.year > 0 ? event.year : Math.abs(event.year) + " BCE"}</div>
+        <div class="timeline-icon">
+          ${event.image ? `<img src="${event.image}" alt="${event.title}">` : "📜"}
+        </div>
+      </div>
+      <div class="timeline-connector"></div>
+    `
+
+    timeline.appendChild(timelineNode)
+
+    // Add click handler for popup
+    const bubble = timelineNode.querySelector(".timeline-bubble")
+    bubble.addEventListener("click", () => showEventPopup(event, bubble))
   })
+
+  // Load user contributions for history
+  loadUserContributions("history", country.userContributions.history)
 }
 
+function showEventPopup(event, bubbleElement) {
+  // Remove existing popup
+  const existingPopup = document.querySelector(".timeline-popup")
+  if (existingPopup) {
+    existingPopup.remove()
+  }
+
+  const popup = document.createElement("div")
+  popup.className = "timeline-popup"
+  popup.innerHTML = `
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <div class="popup-header">
+        <h3>${event.title}</h3>
+        <span class="popup-year">${event.year > 0 ? event.year : Math.abs(event.year) + " BCE"}</span>
+      </div>
+      ${event.image ? `<img src="${event.image}" alt="${event.title}" class="popup-image">` : ""}
+      <p class="popup-text">${event.content}</p>
+    </div>
+  `
+
+  document.body.appendChild(popup)
+
+  // Position popup near the bubble
+  const bubbleRect = bubbleElement.getBoundingClientRect()
+  const popupRect = popup.getBoundingClientRect()
+
+  let left = bubbleRect.left + bubbleRect.width / 2 - popupRect.width / 2
+  let top = bubbleRect.top - popupRect.height - 10
+
+  // Adjust if popup goes off screen
+  if (left < 10) left = 10
+  if (left + popupRect.width > window.innerWidth - 10) {
+    left = window.innerWidth - popupRect.width - 10
+  }
+  if (top < 10) {
+    top = bubbleRect.bottom + 10
+  }
+
+  popup.style.left = left + "px"
+  popup.style.top = top + "px"
+  popup.classList.add("active")
+
+  // Close popup handlers
+  popup.querySelector(".popup-close").addEventListener("click", () => {
+    popup.remove()
+  })
+
+  document.addEventListener("click", function closePopup(e) {
+    if (!popup.contains(e.target) && !bubbleElement.contains(e.target)) {
+      popup.remove()
+      document.removeEventListener("click", closePopup)
+    }
+  })
+}
 function loadSectionContent(sectionId, sectionData) {
   const container = document.getElementById(`${sectionId}Content`)
   if (container && sectionData) {
     container.innerHTML = `
-            <h3>${sectionData.title}</h3>
-            <p>${sectionData.content}</p>
-        `
+        <h3>${sectionData.title}</h3>
+        <p>${sectionData.content}</p>
+        <div class="user-contributions-section">
+            <h4>Community Contributions</h4>
+            <div id="${sectionId}UserContributions" class="user-contributions-container"></div>
+        </div>
+    `
+
+    // Load user contributions for this section
+    const country = countriesData[currentCountry]
+    if (country && country.userContributions[sectionId]) {
+      loadUserContributions(sectionId, country.userContributions[sectionId])
+    }
   }
 }
+
+function loadUserContributions(sectionId, contributions) {
+  const container = document.getElementById(`${sectionId}UserContributions`)
+  if (!container) return
+
+  container.innerHTML = ""
+
+  if (contributions.length === 0) {
+    container.innerHTML = '<p class="no-contributions">No community contributions yet. Be the first to contribute!</p>'
+    return
+  }
+
+  contributions.forEach((contribution) => {
+    const item = document.createElement("div")
+    item.className = "user-contribution-item"
+    item.innerHTML = `
+        <div class="contribution-content">
+            ${contribution.image ? `<img src="${contribution.image}" alt="${contribution.title}" class="contribution-image">` : ""}
+            <div class="contribution-text">
+                <h5>${contribution.title}</h5>
+                <p>${contribution.content}</p>
+                <small class="contribution-date">Added ${new Date(contribution.timestamp).toLocaleDateString()}</small>
+            </div>
+        </div>
+    `
+    container.appendChild(item)
+  })
+}
+
+function applyContribution(contribution) {
+  const country = countriesData[contribution.country]
+  if (!country) return
+
+  if (contribution.type === "map-pin") {
+    country.userPins.push({
+      title: contribution.title,
+      content: contribution.content,
+      lat: contribution.lat,
+      lng: contribution.lng,
+      status: "approved",
+    })
+  } else if (contribution.type === "history") {
+    country.history.push({
+      year: Number.parseInt(contribution.year),
+      title: contribution.title,
+      content: contribution.content,
+      image: contribution.image || null,
+    })
+    // Sort history by year
+    country.history.sort((a, b) => a.year - b.year)
+  } else {
+    // Add to user contributions for the specific section
+    if (!country.userContributions[contribution.type]) {
+      country.userContributions[contribution.type] = []
+    }
+
+    country.userContributions[contribution.type].push({
+      title: contribution.title,
+      content: contribution.content,
+      image: contribution.image || null,
+      timestamp: contribution.timestamp,
+    })
+
+    // Also append to the main section content if it exists
+    if (country[contribution.type]) {
+      country[contribution.type].content += `\n\n${contribution.content}`
+    }
+  }
+
+  // If currently viewing this country, refresh the content
+  if (currentCountry === contribution.country) {
+    loadCountryData(contribution.country)
+  }
+}
+
+function switchAdminTab(tabName) {
+  document.querySelectorAll(".admin-tab").forEach((tab) => {
+    tab.classList.remove("active")
+  })
+  document.querySelector(`[data-admin-tab="${tabName}"]`).classList.add("active")
+
+  document.querySelectorAll(".admin-tab-content").forEach((content) => {
+    content.classList.remove("active")
+  })
+  document.getElementById(`${tabName}Tab`).classList.add("active")
+}
+
+// Utility Functions
+function closeModals() {
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.classList.remove("active")
+  })
+}
+
+function showNotification(message) {
+  // Simple notification system
+  const notification = document.createElement("div")
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    z-index: 3000;
+    box-shadow: 0 4px 12px var(--shadow);
+`
+  notification.textContent = message
+  document.body.appendChild(notification)
+
+  setTimeout(() => {
+    notification.remove()
+  }, 3000)
+}
+
+// Handle browser back/forward
+window.addEventListener("hashchange", loadRoute)
 
 // Country Map
 function initializeCountryMap(country) {
@@ -512,9 +871,9 @@ function initializeCountryMap(country) {
 
   countryMap = L.map("countryMap").setView(country.coordinates, 8)
 
-  // Use English-only tile layer
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
+    language: "en",
   }).addTo(countryMap)
 
   // Add city markers
@@ -537,10 +896,10 @@ function initializeCountryMap(country) {
     }).addTo(countryMap)
 
     marker.bindPopup(`
-            <strong>${pin.title}</strong><br>
-            ${pin.content}<br>
-            <small>Status: ${pin.status}</small>
-        `)
+        <strong>${pin.title}</strong><br>
+        ${pin.content}<br>
+        <small>Status: ${pin.status}</small>
+    `)
   })
 }
 
@@ -577,7 +936,6 @@ function handleContributionTypeChange() {
   const type = document.getElementById("contributionType").value
   const mapPinGroup = document.getElementById("mapPinGroup")
   const yearGroup = document.getElementById("yearGroup")
-  const photoCaptionGroup = document.getElementById("photoCaptionGroup")
 
   if (type === "map-pin") {
     mapPinGroup.style.display = "block"
@@ -591,16 +949,6 @@ function handleContributionTypeChange() {
   } else {
     yearGroup.style.display = "none"
   }
-
-  if (type === "photo-gallery") {
-    photoCaptionGroup.style.display = "block"
-    document.getElementById("contributionImage").required = true
-    document.getElementById("photoCaption").required = true
-  } else {
-    photoCaptionGroup.style.display = "none"
-    document.getElementById("contributionImage").required = false
-    document.getElementById("photoCaption").required = false
-  }
 }
 
 function initializePinMap() {
@@ -613,6 +961,7 @@ function initializePinMap() {
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
+    language: "en",
   }).addTo(pinMap)
 
   let selectedLocation = null
@@ -635,7 +984,6 @@ function handleContributionSubmit(e) {
   const content = formData.get("contributionText")
   const year = formData.get("contributionYear")
   const imageFile = formData.get("contributionImage")
-  const photoCaption = formData.get("photoCaption")
 
   const contribution = {
     id: Date.now(),
@@ -644,14 +992,8 @@ function handleContributionSubmit(e) {
     title: title,
     content: content,
     year: year || null,
-    photoCaption: photoCaption || null,
     timestamp: new Date().toISOString(),
     status: "pending",
-  }
-
-  // For photo gallery contributions, get the section
-  if (type === "photo-gallery") {
-    contribution.section = document.getElementById("contributionType").dataset.section
   }
 
   // Handle image if provided
@@ -687,11 +1029,43 @@ function submitContribution(contribution) {
   pendingContributions.push(contribution)
   localStorage.setItem("pendingContributions", JSON.stringify(pendingContributions))
 
+  // If admin dashboard is open, refresh it immediately
+  if (isAdmin && document.getElementById("adminDashboard").classList.contains("active")) {
+    loadAdminContent()
+  }
+
   closeModals()
   showNotification("Contribution submitted for approval!")
 }
 
 // Admin System
+function handleAdminKeypress(e) {
+  if (e.ctrlKey && e.shiftKey && e.key === "A") {
+    e.preventDefault()
+    showAdminPasswordPrompt()
+  }
+}
+
+function showAdminPasswordPrompt() {
+  document.getElementById("adminPasswordModal").classList.add("active")
+  document.getElementById("adminPassword").focus()
+}
+
+function handleAdminPasswordSubmit(e) {
+  e.preventDefault()
+  const password = document.getElementById("adminPassword").value
+
+  if (password === ADMIN_PASSWORD) {
+    closeModals()
+    openAdminDashboard()
+    document.getElementById("adminPassword").value = ""
+  } else {
+    showNotification("Incorrect password!")
+    document.getElementById("adminPassword").value = ""
+    document.getElementById("adminPassword").focus()
+  }
+}
+
 function openAdminDashboard() {
   isAdmin = true
   document.getElementById("adminDashboard").classList.add("active")
@@ -717,29 +1091,29 @@ function loadContributionsList(type, contributions) {
     const item = document.createElement("div")
     item.className = "contribution-item"
     item.innerHTML = `
-            <div class="contribution-header">
-                <div>
-                    <h4>${contribution.title}</h4>
-                    <div class="contribution-meta">
-                        ${contribution.country} • ${contribution.type} • ${new Date(contribution.timestamp).toLocaleDateString()}
-                    </div>
+        <div class="contribution-header">
+            <div>
+                <h4>${contribution.title}</h4>
+                <div class="contribution-meta">
+                    ${contribution.country} • ${contribution.type} • ${new Date(contribution.timestamp).toLocaleDateString()}
                 </div>
-                ${
-                  type === "pending"
-                    ? `
-                    <div class="contribution-actions">
-                        <button class="btn-approve" onclick="approveContribution(${contribution.id})">Approve</button>
-                        <button class="btn-reject" onclick="rejectContribution(${contribution.id})">Reject</button>
-                    </div>
-                `
-                    : ""
-                }
             </div>
-            <p>${contribution.content}</p>
-            ${contribution.image ? `<img src="${contribution.image}" alt="${contribution.title}" style="max-width: 200px; margin-top: 10px;">` : ""}
-            ${contribution.year ? `<p><strong>Year:</strong> ${contribution.year}</p>` : ""}
-            ${contribution.lat && contribution.lng ? `<p><strong>Location:</strong> ${contribution.lat.toFixed(4)}, ${contribution.lng.toFixed(4)}</p>` : ""}
-        `
+            ${
+              type === "pending"
+                ? `
+                <div class="contribution-actions">
+                    <button class="btn-approve" onclick="approveContribution(${contribution.id})">Approve</button>
+                    <button class="btn-reject" onclick="rejectContribution(${contribution.id})">Reject</button>
+                </div>
+            `
+                : ""
+            }
+        </div>
+        <p>${contribution.content}</p>
+        ${contribution.image ? `<img src="${contribution.image}" alt="${contribution.title}" style="max-width: 200px; margin-top: 10px;">` : ""}
+        ${contribution.year ? `<p><strong>Year:</strong> ${contribution.year}</p>` : ""}
+        ${contribution.lat && contribution.lng ? `<p><strong>Location:</strong> ${contribution.lat.toFixed(4)}, ${contribution.lng.toFixed(4)}</p>` : ""}
+    `
     container.appendChild(item)
   })
 }
@@ -792,114 +1166,6 @@ function rejectContribution(id) {
 
   showNotification("Contribution rejected.")
 }
-
-function applyContribution(contribution) {
-  const country = countriesData[contribution.country]
-  if (!country) return
-
-  if (contribution.type === "map-pin") {
-    country.userPins.push({
-      title: contribution.title,
-      content: contribution.content,
-      lat: contribution.lat,
-      lng: contribution.lng,
-      status: "approved",
-    })
-  } else if (contribution.type === "history") {
-    country.history.push({
-      year: Number.parseInt(contribution.year),
-      title: contribution.title,
-      content: contribution.content,
-      image: contribution.image || null,
-    })
-    // Sort history by year
-    country.history.sort((a, b) => a.year - b.year)
-  } else if (contribution.type === "photo-gallery") {
-    if (!country.photoGalleries[contribution.section]) {
-      country.photoGalleries[contribution.section] = []
-    }
-    country.photoGalleries[contribution.section].push({
-      image: contribution.image,
-      caption: contribution.photoCaption,
-      status: "approved",
-    })
-  } else {
-    // Add to other sections
-    if (country[contribution.type]) {
-      country[contribution.type].content += `\n\n${contribution.content}`
-    }
-  }
-
-  // If currently viewing this country, refresh the content
-  if (currentCountry === contribution.country) {
-    loadCountryData(contribution.country)
-  }
-}
-
-function switchAdminTab(tabName) {
-  document.querySelectorAll(".admin-tab").forEach((tab) => {
-    tab.classList.remove("active")
-  })
-  document.querySelector(`[data-admin-tab="${tabName}"]`).classList.add("active")
-
-  document.querySelectorAll(".admin-tab-content").forEach((content) => {
-    content.classList.remove("active")
-  })
-  document.getElementById(`${tabName}Tab`).classList.add("active")
-}
-
-function loadPhotoGalleries(country) {
-  Object.keys(country.photoGalleries).forEach((section) => {
-    const gallery = document.getElementById(`${section}Gallery`)
-    if (gallery) {
-      gallery.innerHTML = ""
-
-      country.photoGalleries[section].forEach((photo) => {
-        if (photo.status === "approved") {
-          const photoItem = document.createElement("div")
-          photoItem.className = "photo-item"
-          photoItem.innerHTML = `
-                        <img src="${photo.image}" alt="${photo.caption}">
-                        <div class="photo-caption">${photo.caption}</div>
-                    `
-          gallery.appendChild(photoItem)
-        }
-      })
-    }
-  })
-}
-
-// Utility Functions
-function closeModals() {
-  document.querySelectorAll(".modal").forEach((modal) => {
-    modal.classList.remove("active")
-  })
-}
-
-function showNotification(message) {
-  // Simple notification system
-  const notification = document.createElement("div")
-  notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--accent-primary);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        z-index: 3000;
-        box-shadow: 0 4px 12px var(--shadow);
-    `
-  notification.textContent = message
-  document.body.appendChild(notification)
-
-  setTimeout(() => {
-    notification.remove()
-  }, 3000)
-}
-
-// Handle browser back/forward
-window.addEventListener("hashchange", loadRoute)
 
 // Make functions globally available for onclick handlers
 window.approveContribution = approveContribution
