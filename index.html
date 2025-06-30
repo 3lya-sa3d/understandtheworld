@@ -1,134 +1,230 @@
-<!-- Admin Password Modal -->
-<div id="adminPasswordModal" class="modal">
-    <div class="modal-content admin-password-content">
-        <div class="modal-header">
-            <h3>Admin Access</h3>
-            <button class="modal-close admin-password-close">&times;</button>
-        </div>
-        <form id="adminPasswordForm" class="admin-password-form">
-            <div class="form-group">
-                <label for="adminPassword">Enter Admin Password:</label>
-                <input type="password" id="adminPassword" required placeholder="Enter password">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderstandTheWorld</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">🌍 UnderstandTheWorld</h1>
+            <div class="header-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
             </div>
-            <div class="form-actions">
-                <button type="button" class="btn-cancel admin-password-cancel">Cancel</button>
-                <button type="submit" class="btn-submit">Access Dashboard</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page - World Map -->
+        <div id="homePage" class="page active">
+            <div class="page-header">
+                <h2>Explore the World</h2>
+                <p>Click on any country to learn more about its history, culture, and people.</p>
             </div>
-        </form>
-    </div>
-</div>
-
-<div id="overviewTab" class="tab-content active">
-    <div id="countryOverview" class="overview-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="overview">Add Photo</button>
-        <div id="overviewGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="historyTab" class="tab-content">
-    <div class="timeline-container">
-        <div id="timeline" class="timeline"></div>
-    </div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="history">Add Photo</button>
-        <div id="historyGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="cultureTab" class="tab-content">
-    <div id="cultureContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="culture">Add Photo</button>
-        <div id="cultureGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="foodTab" class="tab-content">
-    <div id="foodContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="food">Add Photo</button>
-        <div id="foodGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="booksTab" class="tab-content">
-    <div id="booksContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="books">Add Photo</button>
-        <div id="booksGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="politicsTab" class="tab-content">
-    <div id="politicsContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="politics">Add Photo</button>
-        <div id="politicsGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="tourismTab" class="tab-content">
-    <div id="tourismContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="tourism">Add Photo</button>
-        <div id="tourismGallery" class="photo-gallery"></div>
-    </div>
-</div>
-
-<div id="mapTab" class="tab-content">
-    <div id="countryMap" class="map-container"></div>
-    <div class="map-legend">
-        <h4>Legend</h4>
-        <div class="legend-item">
-            <span class="legend-marker city"></span>
-            <span>Cities</span>
+            <div id="worldMap" class="map-container"></div>
         </div>
-        <div class="legend-item">
-            <span class="legend-marker user-pin"></span>
-            <span>User Contributions</span>
+
+        <!-- Country Page -->
+        <div id="countryPage" class="page">
+            <div class="country-header">
+                <button id="backToHome" class="back-btn">← Back to World Map</button>
+                <div class="country-title">
+                    <img id="countryFlag" class="country-flag" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA5MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0wIDBoOTB2NjBIMHoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz4KPHN2ZyB4PSIyNSIgeT0iMTUiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzMzNzNkYyIvPgo8L3N2Zz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjAiIHkxPSIwIiB4Mj0iOTAiIHkyPSI2MCI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNUY1RjUiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRTBFMEUwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+" alt="">
+                    <h2 id="countryName">Country Name</h2>
+                </div>
+                <button id="addEditBtn" class="add-edit-btn">Add / Edit</button>
+            </div>
+            
+            <div class="country-content">
+                <div class="country-sidebar">
+                    <nav class="country-nav">
+                        <button class="nav-tab active" data-tab="overview">Overview</button>
+                        <button class="nav-tab" data-tab="history">History</button>
+                        <button class="nav-tab" data-tab="culture">Culture</button>
+                        <button class="nav-tab" data-tab="food">Food</button>
+                        <button class="nav-tab" data-tab="books">Books</button>
+                        <button class="nav-tab" data-tab="politics">Politics</button>
+                        <button class="nav-tab" data-tab="tourism">Touristic Sites</button>
+                        <button class="nav-tab" data-tab="map">Country Map</button>
+                        <button class="nav-tab" data-tab="extras">Extras</button>
+                    </nav>
+                </div>
+                
+                <div class="country-main">
+                    <div id="overviewTab" class="tab-content active">
+                        <div id="countryOverview" class="overview-content"></div>
+                    </div>
+                    
+                    <div id="historyTab" class="tab-content">
+                        <div class="timeline-container">
+                            <div id="timeline" class="timeline"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="cultureTab" class="tab-content">
+                        <div id="cultureContent" class="section-content"></div>
+                    </div>
+                    
+                    <div id="foodTab" class="tab-content">
+                        <div id="foodContent" class="section-content"></div>
+                    </div>
+                    
+                    <div id="booksTab" class="tab-content">
+                        <div id="booksContent" class="section-content"></div>
+                    </div>
+                    
+                    <div id="politicsTab" class="tab-content">
+                        <div id="politicsContent" class="section-content"></div>
+                    </div>
+                    
+                    <div id="tourismTab" class="tab-content">
+                        <div id="tourismContent" class="section-content"></div>
+                    </div>
+                    
+                    <div id="mapTab" class="tab-content">
+                        <div id="countryMap" class="map-container"></div>
+                        <div class="map-legend">
+                            <h4>Legend</h4>
+                            <div class="legend-item">
+                                <span class="legend-marker city"></span>
+                                <span>Cities</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker user-pin"></span>
+                                <span>User Contributions</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker pending-pin"></span>
+                                <span>Pending Approval</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="extrasTab" class="tab-content">
+                        <div id="extrasContent" class="section-content"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="legend-item">
-            <span class="legend-marker pending-pin"></span>
-            <span>Pending Approval</span>
+    </main>
+
+    <!-- Contribution Modal -->
+    <div id="contributionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Contribution</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="contributionForm" class="contribution-form">
+                <div class="form-group">
+                    <label for="contributionType">Section:</label>
+                    <select id="contributionType" required>
+                        <option value="">Select section...</option>
+                        <option value="overview">Overview</option>
+                        <option value="history">History</option>
+                        <option value="culture">Culture</option>
+                        <option value="food">Food</option>
+                        <option value="books">Books</option>
+                        <option value="politics">Politics</option>
+                        <option value="tourism">Touristic Sites</option>
+                        <option value="extras">Extras</option>
+                        <option value="map-pin">Map Pin</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="mapPinGroup" style="display: none;">
+                    <label>Click on the map to place your pin</label>
+                    <div id="pinMap" class="pin-map"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contributionTitle">Title:</label>
+                    <input type="text" id="contributionTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contributionText">Content:</label>
+                    <textarea id="contributionText" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contributionImage">Image (optional):</label>
+                    <input type="file" id="contributionImage" accept="image/*">
+                </div>
+                
+                <div class="form-group" id="yearGroup" style="display: none;">
+                    <label for="contributionYear">Year (for history):</label>
+                    <input type="number" id="contributionYear" min="1" max="2024">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Cancel</button>
+                    <button type="submit" class="btn-submit">Submit for Approval</button>
+                </div>
+            </form>
         </div>
     </div>
-</div>
 
-<div id="extrasTab" class="tab-content">
-    <div id="extrasContent" class="section-content"></div>
-    <div class="photo-gallery-section">
-        <h4>Photo Gallery</h4>
-        <button class="add-photo-btn" data-section="extras">Add Photo</button>
-        <div id="extrasGallery" class="photo-gallery"></div>
+    <!-- Admin Password Modal -->
+    <div id="adminPasswordModal" class="modal">
+        <div class="modal-content admin-password-content">
+            <div class="modal-header">
+                <h3>Admin Access</h3>
+                <button class="modal-close admin-password-close">&times;</button>
+            </div>
+            <form id="adminPasswordForm" class="admin-password-form">
+                <div class="form-group">
+                    <label for="adminPassword">Enter Admin Password:</label>
+                    <input type="password" id="adminPassword" required placeholder="Enter password">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel admin-password-cancel">Cancel</button>
+                    <button type="submit" class="btn-submit">Access Dashboard</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div class="form-group">
-    <label for="contributionType">Section:</label>
-    <select id="contributionType" required>
-        <option value="">Select section...</option>
-        <option value="overview">Overview</option>
-        <option value="history">History</option>
-        <option value="culture">Culture</option>
-        <option value="food">Food</option>
-        <option value="books">Books</option>
-        <option value="politics">Politics</option>
-        <option value="tourism">Touristic Sites</option>
-        <option value="extras">Extras</option>
-        <option value="map-pin">Map Pin</option>
-        <option value="photo-gallery">Photo Gallery</option>
-    </select>
-</div>
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="modal admin-modal">
+        <div class="modal-content admin-content">
+            <div class="modal-header">
+                <h3>Admin Dashboard</h3>
+                <button class="modal-close admin-close">&times;</button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-admin-tab="pending">Pending Contributions</button>
+                <button class="admin-tab" data-admin-tab="approved">Approved</button>
+                <button class="admin-tab" data-admin-tab="rejected">Rejected</button>
+            </div>
+            <div class="admin-content-area">
+                <div id="pendingTab" class="admin-tab-content active">
+                    <div id="pendingList" class="contributions-list"></div>
+                </div>
+                <div id="approvedTab" class="admin-tab-content">
+                    <div id="approvedList" class="contributions-list"></div>
+                </div>
+                <div id="rejectedTab" class="admin-tab-content">
+                    <div id="rejectedList" class="contributions-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="form-group" id="photoCaptionGroup" style="display: none;">
-    <label for="photoCaption">Photo Caption:</label>
-    <input type="text" id="photoCaption" placeholder="Enter photo caption">
-</div>
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
