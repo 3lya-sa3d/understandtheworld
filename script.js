@@ -650,21 +650,39 @@ function loadHistoryContent(country) {
     timelineNode.style.top = `${(index + 1) * 200 - 60}px`
 
     timelineNode.innerHTML = `
+      <div class="timeline-date ${index % 2 === 0 ? "date-right" : "date-left"}">
+        ${event.year > 0 ? event.year : Math.abs(event.year) + " BCE"}
+      </div>
       <div class="timeline-bubble" data-event-index="${index}">
-        <div class="timeline-year">${event.year > 0 ? event.year : Math.abs(event.year) + " BCE"}</div>
         <div class="timeline-icon">
           ${event.image ? `<img src="${event.image}" alt="${event.title}">` : "📜"}
         </div>
+        <div class="timeline-hover-popup">
+          <div class="hover-popup-content">
+            <h4>${event.title}</h4>
+            <p>${event.content}</p>
+          </div>
+        </div>
       </div>
+      <div class="timeline-title">${event.title}</div>
       <div class="timeline-connector"></div>
     `
 
     timeline.appendChild(timelineNode)
-
-    // Add click handler for popup
-    const bubble = timelineNode.querySelector(".timeline-bubble")
-    bubble.addEventListener("click", () => showEventPopup(event, bubble))
   })
+
+  // Add user contributions section for history
+  const historySection = document.createElement("div")
+  historySection.className = "user-contributions-section"
+  historySection.innerHTML = `
+    <h4>Community Historical Contributions</h4>
+    <div id="historyUserContributions" class="user-contributions-container"></div>
+  `
+
+  // Insert after timeline
+  const historyTab = document.getElementById("historyTab")
+  const timelineContainer = historyTab.querySelector(".timeline-container")
+  historyTab.insertBefore(historySection, timelineContainer.nextSibling)
 
   // Load user contributions for history
   loadUserContributions("history", country.userContributions.history)
@@ -764,6 +782,7 @@ function loadUserContributions(sectionId, contributions) {
             ${contribution.image ? `<img src="${contribution.image}" alt="${contribution.title}" class="contribution-image">` : ""}
             <div class="contribution-text">
                 <h5>${contribution.title}</h5>
+                ${contribution.year ? `<span class="contribution-year">${contribution.year > 0 ? contribution.year : Math.abs(contribution.year) + " BCE"}</span>` : ""}
                 <p>${contribution.content}</p>
                 <small class="contribution-date">Added ${new Date(contribution.timestamp).toLocaleDateString()}</small>
             </div>
@@ -786,6 +805,7 @@ function applyContribution(contribution) {
       status: "approved",
     })
   } else if (contribution.type === "history") {
+    // Add to main history timeline
     country.history.push({
       year: Number.parseInt(contribution.year),
       title: contribution.title,
@@ -794,6 +814,19 @@ function applyContribution(contribution) {
     })
     // Sort history by year
     country.history.sort((a, b) => a.year - b.year)
+
+    // Also add to user contributions for community section
+    if (!country.userContributions[contribution.type]) {
+      country.userContributions[contribution.type] = []
+    }
+
+    country.userContributions[contribution.type].push({
+      title: contribution.title,
+      content: contribution.content,
+      image: contribution.image || null,
+      timestamp: contribution.timestamp,
+      year: contribution.year,
+    })
   } else {
     // Add to user contributions for the specific section
     if (!country.userContributions[contribution.type]) {
