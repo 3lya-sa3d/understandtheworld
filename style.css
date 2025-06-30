@@ -295,7 +295,7 @@ body {
 .timeline {
   position: relative;
   min-height: 600px;
-  padding: 0 2rem;
+  padding: 0 4rem; /* Increased padding for dates */
 }
 
 .timeline-path-container {
@@ -335,6 +335,9 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
   transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .timeline-node:nth-child(even) {
@@ -353,11 +356,36 @@ body {
 }
 
 .timeline-node.left {
-  left: 20%;
+  left: 15%;
 }
 
 .timeline-node.right {
-  right: 20%;
+  right: 15%;
+}
+
+/* Timeline Date positioned to the side */
+.timeline-date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--duolingo-green);
+  background: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--duolingo-green);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(88, 204, 2, 0.2);
+  z-index: 3;
+}
+
+.timeline-date.date-right {
+  right: 140px; /* Position to the right of left-side bubbles */
+}
+
+.timeline-date.date-left {
+  left: 140px; /* Position to the left of right-side bubbles */
 }
 
 .timeline-bubble {
@@ -366,7 +394,6 @@ body {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--duolingo-green), var(--duolingo-blue));
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -374,7 +401,7 @@ body {
   box-shadow: 0 8px 25px rgba(88, 204, 2, 0.3);
   border: 4px solid white;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed to visible for hover popup */
 }
 
 .timeline-bubble:hover {
@@ -392,27 +419,71 @@ body {
   box-shadow: 0 8px 25px rgba(206, 130, 255, 0.3);
 }
 
-.timeline-year {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-bottom: 0.25rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
 .timeline-icon {
   font-size: 1.5rem;
   color: white;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .timeline-icon img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid white;
+  border: 3px solid white;
+}
+
+/* Timeline Title below the bubble */
+.timeline-title {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 150px;
+  line-height: 1.3;
+}
+
+/* Hover Popup */
+.timeline-hover-popup {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--duolingo-green);
+  max-width: 300px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.timeline-bubble:hover .timeline-hover-popup {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.hover-popup-content h4 {
+  color: var(--duolingo-green);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.hover-popup-content p {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .timeline-connector {
@@ -431,6 +502,61 @@ body {
 
 .timeline-node.right .timeline-connector {
   left: -20px;
+}
+
+/* User Contributions Year Badge */
+.contribution-year {
+  display: inline-block;
+  background: var(--duolingo-green);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 0 2rem;
+  }
+
+  .timeline-node.left,
+  .timeline-node.right {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-date.date-right,
+  .timeline-date.date-left {
+    position: static;
+    margin-bottom: 1rem;
+    left: auto;
+    right: auto;
+  }
+
+  .timeline-bubble {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-connector {
+    display: none;
+  }
+
+  .timeline-hover-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+  }
 }
 
 /* Timeline Popup */
